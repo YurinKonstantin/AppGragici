@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="AppGragici.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppGragici"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    xmlns:chart="using:Telerik.UI.Xaml.Controls.Chart"
+    xmlns:telerikCharting="using:Telerik.Charting"
+    xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+ 
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <telerikChart:RadCartesianChart x:Name="radChart" PaletteName="DefaultLight">
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:LinearAxis Foreground="Black" FontSize="15"/>
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LinearAxis  Foreground="Black" FontSize="15"/>
+            </telerikChart:RadCartesianChart.VerticalAxis>
+           
+            
+        </telerikChart:RadCartesianChart>
+        <telerikPrimitives:RadLegendControl LegendProvider="{Binding ElementName=radChart}" HorizontalAlignment="Right"/>
+        <TextBlock Text="sfsfsf" Grid.Row="1" Foreground="Green"/>
+        <Button Grid.Row="1" HorizontalAlignment="Right" Click="Button_Click"/>
+    </Grid>
+</Page>
